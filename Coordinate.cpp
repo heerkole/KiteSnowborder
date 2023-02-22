@@ -1,3 +1,10 @@
+/*! 
+    @author Francesco Ercolino 
+    @brief Programma in linguaggio C++ che simula una gara di kitesnowboarding 
+    @brief determina il podio tramita la generazione casuale delle coordinate degli atleti
+    @file Coordinate.cpp
+*/
+
 #include <iostream>
 #include <ctime>
 #include <fstream>
@@ -10,6 +17,12 @@ using namespace std;
 
 
 //Dichiarazione struct
+/*!
+    @struct DatiAtleta
+    @brief Contiene i dati dell'atleta
+    @param Matricola Contine il numero matricola dell'atleta
+    @param Cognome Contine il cognome inserito dall'utente dell'atleta
+*/
 struct DatiAtleta
 {
     string Matricola;
@@ -20,11 +33,15 @@ struct DatiAtleta
 //Dichiarazione globale di stringhe che servono in varie funzioni
 string max_cognome, secondo_max_cognome, terzo_max_cognome;
 
-// Dichiarazione anticipata della funzione GeneraRiempi
+// Dichiarazione anticipata della funzioni
 void GeneraRiempi(DatiAtleta* p_Dati, int cont, fstream& f);
 void CalcolaPodio(DatiAtleta* p_Dati, int cont);
 
-
+/*!
+    @brief Simula l'animazione di salvataggio dopo che l'utente 
+    @brief ha inserito i cognomi degli atleti e le coordinate sono state generate
+    @param fileName Parametro che si riferisce al nome del file utilizzato 
+*/
 //Funzione che stampa la simulazione del salvataggio
 void Salvataggio(const std::string& fileName) 
 {
@@ -38,6 +55,7 @@ void Salvataggio(const std::string& fileName)
         int numBarre = (int)(i / 5);
         int numSpazi = 20 - numBarre;
         
+        /*! @brief Cicli di visualizzazione barra di caricamento */
         for (int j = 0; j < numBarre; j++) { cout << "#"; }
         
         for (int j = 0; j < numSpazi; j++) { cout << " "; }
@@ -51,6 +69,11 @@ void Salvataggio(const std::string& fileName)
 
 
 //Funzione che calcola il podio
+/*!
+    @brief Funzione che calcola il podio vincente prelevando i dati dal file testuale dati.txt
+    @param p_Dati Importazione vettore strutturato
+    @param cont Importazione della variabile per gestire gli elementi della struct
+*/
 void CalcolaPodio(DatiAtleta* p_Dati, int cont) 
 {
     ifstream f(NOMEfile);
@@ -63,8 +86,10 @@ void CalcolaPodio(DatiAtleta* p_Dati, int cont)
     while (getline(f, nome, ',') && getline(f, matricola, ',') && getline(f, risultato, ',') && getline(f, n_cord)) 
     {
         // Converte il risultato in un numero intero
+        /*! @brief Converte il risultato in formato stringa preso dal file testuale in intero per permettere di calcolare il podio*/
         int int_risultato = std::stoi(risultato);
 
+        /*! @brief Calcolo del podio */
         // Calcola il podio
         if (int_risultato > max) 
         {
@@ -98,6 +123,7 @@ void CalcolaPodio(DatiAtleta* p_Dati, int cont)
 }
 
 
+/*! @brief Funzione che permette di visualizzare il podio dopo aver calcolato le posizioni */
 //Funzione che visualizza il podio
 void VisualizzaPodio()
 {
@@ -112,10 +138,11 @@ void VisualizzaPodio()
     << " 3. " << terzo_max_cognome << endl;
 }
 
-
+/*! @brief Funzione che si occupa di prendere da input dell'utente i cognomi inseriti e inserirli nel file dati.txt */
 //Funzione che fa inserire il cognome dell'atleta all'utente e crea / sovrascrive il file "dati.txt"
 void InserisciDati()
 {
+    /*! @param p_Dati Vettore puntatore strutturato che punto al vettore strutturato Dati*/
     DatiAtleta* p_Dati = &Dati[0];
 
     fstream f(NOMEfile, ios::app);
@@ -170,6 +197,12 @@ void InserisciDati()
     }
 }
 
+/*! 
+    @brief Funzione che si occupa di generare le coordinate per ogni atleta e inserirle nel file dati.txt
+    @param p_Dati Importazione vettore strutturato per riempire la struct
+    @param cont Importazione della variabile per gestire gli elementi della struct
+    @param f Importazione variabile file per sovrascrivere il file dati.txt
+*/
 //Funzione che genera i dati e riempie la struct
 void GeneraRiempi(DatiAtleta* p_Dati, int cont, fstream& f)
 {
