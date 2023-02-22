@@ -28,9 +28,12 @@ void CalcolaPodio(DatiAtleta* p_Dati, int cont);
 //Funzione che stampa la simulazione del salvataggio
 void Salvataggio(const std::string& fileName) 
 {
+    system("clear");
+    cout<<"\n\n";
+    
     for(int i = 0; i <= 100; i++) 
     {
-        cout << "\rSalvataggio dei dati in corso... " << i << "% [";
+        cout << "\r Salvataggio dei dati in corso... " << i << "% [";
         
         int numBarre = (int)(i / 5);
         int numSpazi = 20 - numBarre;
@@ -43,7 +46,7 @@ void Salvataggio(const std::string& fileName)
 
         this_thread::sleep_for(chrono::milliseconds(50));
     }
-    std::cout << "\nDati salvati sul file " << fileName << std::endl;
+    cout<<"\n Dati salvati sul file "<<fileName<<"!"<<endl;
 }
 
 
@@ -65,24 +68,24 @@ void CalcolaPodio(DatiAtleta* p_Dati, int cont)
         // Calcola il podio
         if (int_risultato > max) 
         {
-        terzo_max = secondo_max;
-        terzo_max_cognome = secondo_max_cognome;
-        secondo_max = max;
-        secondo_max_cognome = max_cognome;
-        max = int_risultato;
-        max_cognome = nome;
+            terzo_max = secondo_max;
+            terzo_max_cognome = secondo_max_cognome;
+            secondo_max = max;
+            secondo_max_cognome = max_cognome;
+            max = int_risultato;
+            max_cognome = nome;
         } 
         else if (int_risultato > secondo_max) 
         {
-        terzo_max = secondo_max;
-        terzo_max_cognome = secondo_max_cognome;
-        secondo_max = int_risultato;
-        secondo_max_cognome = nome;
+            terzo_max = secondo_max;
+            terzo_max_cognome = secondo_max_cognome;
+            secondo_max = int_risultato;
+            secondo_max_cognome = nome;
         } 
         else if (int_risultato > terzo_max) 
         {
-        terzo_max = int_risultato;
-        terzo_max_cognome = nome;
+            terzo_max = int_risultato;
+            terzo_max_cognome = nome;
         }
 
         // Trova il cognome dell'atleta con il risultato e il numero di coordinate generate più alto
@@ -98,10 +101,15 @@ void CalcolaPodio(DatiAtleta* p_Dati, int cont)
 //Funzione che visualizza il podio
 void VisualizzaPodio()
 {
-  cout << " Podio:\n";
-  cout << " 1. " << max_cognome << endl;
-  cout << " 2. " << secondo_max_cognome << endl;
-  cout << " 3. " << terzo_max_cognome << endl;
+    string appoggio;
+    
+    cout<<"\n Il podio è pronto! Premi ENTER per visualizzare la classifica finale...";
+    cin.ignore();
+    getline(cin, appoggio); // aspetta l'input dell'utente
+    cout << "\n\n Podio finale :\n"
+    << " 1. " << max_cognome << endl
+    << " 2. " << secondo_max_cognome << endl
+    << " 3. " << terzo_max_cognome << endl;
 }
 
 
@@ -121,8 +129,12 @@ void InserisciDati()
     while(continua=='s')
     {
         cin.ignore();
+        
+        if(cont==0)
+            system("clear");
 
         //Inserimento cognome dell'atleta
+        cout<<"\n INSERIMENTO COGNOME ATLETI :\n\n";
         cout<<" Cognome atleta n."<<cont+1<<" : ";
 
         //Riempimento vettore e scrittura sul file
@@ -134,14 +146,16 @@ void InserisciDati()
 
         cout<<" Continuare l'inserimento? (s/n) : ";
         cin>>continua;
+        
+        system("clear");
 
 
         //Controllo sulla validità della scelta inserita
         if(continua=='s'||continua=='n') {
            cont++;
 
-           if(continua=='n') {
-                
+           if(continua=='n')
+           {
                 //Salvataggio finale e animazione salvataggio
                 f.close();
                 Salvataggio(NOMEfile);
@@ -149,7 +163,7 @@ void InserisciDati()
            }
         }
         else {
-            cout<<"\a La scelta inserita non è tra quelle valide!";
+            cout<<"\a\n La scelta inserita non è tra quelle valide!";
             cin.clear();
             cin.ignore();
         }
