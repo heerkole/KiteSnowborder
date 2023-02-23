@@ -62,6 +62,7 @@ void Salvataggio(const std::string& fileName)
         
         cout << "]";
 
+        /*! @brief Istruzione che imposta il timer di 50 millisecondi per mostrare il prossimo carattere stampato sull'animazione di caricamento */
         this_thread::sleep_for(chrono::milliseconds(50));
     }
     cout<<"\n Dati salvati sul file "<<fileName<<"!"<<endl;
@@ -79,6 +80,16 @@ void CalcolaPodio(DatiAtleta* p_Dati, int cont)
     ifstream f(NOMEfile);
 
     //Dichiarazione variabili
+    /*! @param appoggio Variabile appoggio che preleva le informazioni dal file 
+        @param matricola Variabile di appoggio che contiene la matricola presa dal file 
+        @param risultato Variabile di appoggio che contiene il risultato preso dal file
+        @param n_cord Variabile di appoggio che contiene il numero di coordinate preso dal file
+        @param nome Variabile di appoggio che contiene il nome dell'atleta preso dal file 
+        @param max Variabile usata per calcolare il podio
+        @param secondo_max Variabile usata per calcolare il podio
+        @param terzo_max Variabile usata per calcolare il podio
+     */
+
     string appoggio, matricola, risultato, n_cord, nome;
     int max = 0, secondo_max = 0, terzo_max = 0;
 
@@ -152,6 +163,7 @@ void InserisciDati()
     char continua = 's';
     int cont = 0;
 
+    /*! @brief Ciclo di inserimento cognome da parte dell'utente */
     //Ciclo di input cognome e inserimento nel file 
     while(continua=='s')
     {
@@ -167,6 +179,7 @@ void InserisciDati()
         //Riempimento vettore e scrittura sul file
         getline(cin, p_Dati[cont].Cognome);
 
+        /*! @brief Dopo aver inserito il cognome, vengono generate le coordinate e calcolato il podio */
         //Genera le coordinate che si riferiscono all'atleta inserito
         GeneraRiempi(p_Dati, cont, f);
         CalcolaPodio(p_Dati, cont);
@@ -183,6 +196,7 @@ void InserisciDati()
 
            if(continua=='n')
            {
+                /*! @brief Se l'utente decide di finire di inserire i cognomi, viene visualizzata l'animazione di salvataggio e calcolato il podio */
                 //Salvataggio finale e animazione salvataggio
                 f.close();
                 Salvataggio(NOMEfile);
@@ -206,6 +220,19 @@ void InserisciDati()
 //Funzione che genera i dati e riempie la struct
 void GeneraRiempi(DatiAtleta* p_Dati, int cont, fstream& f)
 {
+    /*! @brief Generazione matricola, coordinate totali, x1, x2, y1, y2 
+        @param n_Matricola Variabile che contiene il numero generato della matricola per un atleta singolo 
+        @param n_cord Variabile che contiene il numero totale di coordinate generate per un atleta singolo
+        @param n_cordX1 Variabile che contiene che contine la coordinata x del punto 1
+        @param n_cordX2 Variabile che contiene che contine la coordinata x del punto 2
+        @param n_cordY1 Variabile che contiene che contine la coordinata y del punto 1
+        @param n_cordY2 Variabile che contiene che contine la coordinata y del punto 2
+        @param pow_x1 Variabile che contiene il risultato dell'elevazione a potenza di n_cordX1
+        @param pow_x2 Variabile che contiene il risultato dell'elevazione a potenza di n_cordX2
+        @param pow_y1 Variabile che contiene il risultato dell'elevazione a potenza di n_cordY1
+        @param pow_y2 Variabile che contiene il risultato dell'elevazione a potenza di n_cordY2
+        @param risultato Variabile che contiene il risultato della formula della distanza tra i due punti
+    */
     //Generazione coordinate
     int n_Matricola = rand()%1000+1;
     int n_cord = rand()%10+1;
@@ -226,9 +253,11 @@ void GeneraRiempi(DatiAtleta* p_Dati, int cont, fstream& f)
     //Calcolo risultato con la formula della distanza tra due punti
     int risultato = sqrt((pow_x1-pow_x2)+(pow_y1-pow_y2));
 
+    /*! @brief Conversione in stringa della matricola generata casualmente precedentemente */
     //Conversione a stringa 
     p_Dati[cont].Matricola = to_string(n_Matricola);
 
+    /*! @brief Scrittura sul file del cognome, matricola, risultato ottenuto e numero di coordinate totali di un singolo atleta */
     //Scrittura sul file 
     f<<p_Dati[cont].Cognome<<","
      <<p_Dati[cont].Matricola<<","
