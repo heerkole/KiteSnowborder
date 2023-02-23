@@ -1,0 +1,316 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>kitesnowboarder: Riferimenti per il file Coordinate.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">kitesnowboarder
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generato da Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Cerca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Caricamento in corso...</div>
+<div class="SRStatus" id="Searching">Ricerca in corso...</div>
+<div class="SRStatus" id="NoMatches">Nessun risultato</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Composti</a> &#124;
+<a href="#define-members">Definizioni</a> &#124;
+<a href="#func-members">Funzioni</a> &#124;
+<a href="#var-members">Variabili</a>  </div>
+  <div class="headertitle"><div class="title">Riferimenti per il file Coordinate.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Programma in linguaggio C++ che simula una gara di kitesnowboarding.  
+<a href="#details">Continua...</a></p>
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;ctime&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
+<code>#include &lt;thread&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Composti</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_dati_atleta.html">DatiAtleta</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contiene i dati dell'atleta.  <a href="struct_dati_atleta.html#details">Continua...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Definizioni</h2></td></tr>
+<tr class="memitem:aeab93fe7056aa87bc1f886add2ffcd3a"><td class="memItemLeft" align="right" valign="top"><a id="aeab93fe7056aa87bc1f886add2ffcd3a" name="aeab93fe7056aa87bc1f886add2ffcd3a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>NOMEfile</b>&#160;&#160;&#160;&quot;dati.txt&quot;</td></tr>
+<tr class="separator:aeab93fe7056aa87bc1f886add2ffcd3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funzioni</h2></td></tr>
+<tr class="memitem:a32239d73a8492e4b093a46bb1c4eb1f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_coordinate_8cpp.html#a32239d73a8492e4b093a46bb1c4eb1f3">GeneraRiempi</a> (<a class="el" href="struct_dati_atleta.html">DatiAtleta</a> *p_Dati, int cont, fstream &amp;f)</td></tr>
+<tr class="memdesc:a32239d73a8492e4b093a46bb1c4eb1f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funzione che si occupa di generare le coordinate per ogni atleta e inserirle nel file dati.txt.  <br /></td></tr>
+<tr class="separator:a32239d73a8492e4b093a46bb1c4eb1f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d3e37ac9a6a76af820be3cf2a854b14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_coordinate_8cpp.html#a3d3e37ac9a6a76af820be3cf2a854b14">CalcolaPodio</a> (<a class="el" href="struct_dati_atleta.html">DatiAtleta</a> *p_Dati, int cont)</td></tr>
+<tr class="memdesc:a3d3e37ac9a6a76af820be3cf2a854b14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funzione che calcola il podio vincente prelevando i dati dal file testuale dati.txt.  <br /></td></tr>
+<tr class="separator:a3d3e37ac9a6a76af820be3cf2a854b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf746b1ca6a12c6a2ddcca900de34fd1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_coordinate_8cpp.html#aaf746b1ca6a12c6a2ddcca900de34fd1">Salvataggio</a> (const std::string &amp;fileName)</td></tr>
+<tr class="memdesc:aaf746b1ca6a12c6a2ddcca900de34fd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simula l'animazione di salvataggio dopo che l'utente.  <br /></td></tr>
+<tr class="separator:aaf746b1ca6a12c6a2ddcca900de34fd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a340ab192e719b86d27ead9e7faa3ad1a"><td class="memItemLeft" align="right" valign="top"><a id="a340ab192e719b86d27ead9e7faa3ad1a" name="a340ab192e719b86d27ead9e7faa3ad1a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>VisualizzaPodio</b> ()</td></tr>
+<tr class="memdesc:a340ab192e719b86d27ead9e7faa3ad1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funzione che permette di visualizzare il podio dopo aver calcolato le posizioni. <br /></td></tr>
+<tr class="separator:a340ab192e719b86d27ead9e7faa3ad1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95c656494b845caeb7fbe24b4e807e98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_coordinate_8cpp.html#a95c656494b845caeb7fbe24b4e807e98">InserisciDati</a> ()</td></tr>
+<tr class="memdesc:a95c656494b845caeb7fbe24b4e807e98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funzione che si occupa di prendere da input dell'utente i cognomi inseriti e inserirli nel file dati.txt.  <br /></td></tr>
+<tr class="separator:a95c656494b845caeb7fbe24b4e807e98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top"><a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> ()</td></tr>
+<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funzione principale, si occupa solo di visualizzare il messaggio di benvenuto e richiamare la prima funzione <br  />
+ <br /></td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variabili</h2></td></tr>
+<tr class="memitem:ac01b2655161800e99e3072a24d780ff5"><td class="memItemLeft" align="right" valign="top"><a id="ac01b2655161800e99e3072a24d780ff5" name="ac01b2655161800e99e3072a24d780ff5"></a>
+struct <a class="el" href="struct_dati_atleta.html">DatiAtleta</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Dati</b> [100]</td></tr>
+<tr class="separator:ac01b2655161800e99e3072a24d780ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94fde239546255d8ff0e847a870d82e4"><td class="memItemLeft" align="right" valign="top"><a id="a94fde239546255d8ff0e847a870d82e4" name="a94fde239546255d8ff0e847a870d82e4"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>max_cognome</b></td></tr>
+<tr class="separator:a94fde239546255d8ff0e847a870d82e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafc82012e622a5ab2250bedb5b52b5c9"><td class="memItemLeft" align="right" valign="top"><a id="aafc82012e622a5ab2250bedb5b52b5c9" name="aafc82012e622a5ab2250bedb5b52b5c9"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>secondo_max_cognome</b></td></tr>
+<tr class="separator:aafc82012e622a5ab2250bedb5b52b5c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a155aacfa09535765102ec0fc367f8883"><td class="memItemLeft" align="right" valign="top"><a id="a155aacfa09535765102ec0fc367f8883" name="a155aacfa09535765102ec0fc367f8883"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>terzo_max_cognome</b></td></tr>
+<tr class="separator:a155aacfa09535765102ec0fc367f8883"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrizione dettagliata</h2>
+<div class="textblock"><p>Programma in linguaggio C++ che simula una gara di kitesnowboarding. </p>
+<dl class="section author"><dt>Autore</dt><dd>Francesco Ercolino</dd></dl>
+<p>determina il podio tramita la generazione casuale delle coordinate degli atleti </p>
+</div><h2 class="groupheader">Documentazione delle funzioni</h2>
+<a id="a3d3e37ac9a6a76af820be3cf2a854b14" name="a3d3e37ac9a6a76af820be3cf2a854b14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d3e37ac9a6a76af820be3cf2a854b14">&#9670;&#160;</a></span>CalcolaPodio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CalcolaPodio </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_dati_atleta.html">DatiAtleta</a> *&#160;</td>
+          <td class="paramname"><em>p_Dati</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cont</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funzione che calcola il podio vincente prelevando i dati dal file testuale dati.txt. </p>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_Dati</td><td>Importazione vettore strutturato </td></tr>
+    <tr><td class="paramname">cont</td><td>Importazione della variabile per gestire gli elementi della struct </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">appoggio</td><td>Variabile appoggio che preleva le informazioni dal file </td></tr>
+    <tr><td class="paramname">matricola</td><td>Variabile di appoggio che contiene la matricola presa dal file </td></tr>
+    <tr><td class="paramname">risultato</td><td>Variabile di appoggio che contiene il risultato preso dal file </td></tr>
+    <tr><td class="paramname">n_cord</td><td>Variabile di appoggio che contiene il numero di coordinate preso dal file </td></tr>
+    <tr><td class="paramname">nome</td><td>Variabile di appoggio che contiene il nome dell'atleta preso dal file </td></tr>
+    <tr><td class="paramname">max</td><td>Variabile usata per calcolare il podio </td></tr>
+    <tr><td class="paramname">secondo_max</td><td>Variabile usata per calcolare il podio </td></tr>
+    <tr><td class="paramname">terzo_max</td><td>Variabile usata per calcolare il podio</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a32239d73a8492e4b093a46bb1c4eb1f3" name="a32239d73a8492e4b093a46bb1c4eb1f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32239d73a8492e4b093a46bb1c4eb1f3">&#9670;&#160;</a></span>GeneraRiempi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GeneraRiempi </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_dati_atleta.html">DatiAtleta</a> *&#160;</td>
+          <td class="paramname"><em>p_Dati</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cont</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">fstream &amp;&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funzione che si occupa di generare le coordinate per ogni atleta e inserirle nel file dati.txt. </p>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_Dati</td><td>Importazione vettore strutturato per riempire la struct </td></tr>
+    <tr><td class="paramname">cont</td><td>Importazione della variabile per gestire gli elementi della struct </td></tr>
+    <tr><td class="paramname">f</td><td>Importazione variabile file per sovrascrivere il file dati.txt </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Generazione matricola, coordinate totali, x1, x2, y1, y2 </p><dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n_Matricola</td><td>Variabile che contiene il numero generato della matricola per un atleta singolo </td></tr>
+    <tr><td class="paramname">n_cord</td><td>Variabile che contiene il numero totale di coordinate generate per un atleta singolo </td></tr>
+    <tr><td class="paramname">n_cordX1</td><td>Variabile che contiene che contine la coordinata x del punto 1 </td></tr>
+    <tr><td class="paramname">n_cordX2</td><td>Variabile che contiene che contine la coordinata x del punto 2 </td></tr>
+    <tr><td class="paramname">n_cordY1</td><td>Variabile che contiene che contine la coordinata y del punto 1 </td></tr>
+    <tr><td class="paramname">n_cordY2</td><td>Variabile che contiene che contine la coordinata y del punto 2 </td></tr>
+    <tr><td class="paramname">pow_x1</td><td>Variabile che contiene il risultato dell'elevazione a potenza di n_cordX1 </td></tr>
+    <tr><td class="paramname">pow_x2</td><td>Variabile che contiene il risultato dell'elevazione a potenza di n_cordX2 </td></tr>
+    <tr><td class="paramname">pow_y1</td><td>Variabile che contiene il risultato dell'elevazione a potenza di n_cordY1 </td></tr>
+    <tr><td class="paramname">pow_y2</td><td>Variabile che contiene il risultato dell'elevazione a potenza di n_cordY2 </td></tr>
+    <tr><td class="paramname">risultato</td><td>Variabile che contiene il risultato della formula della distanza tra i due punti</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a95c656494b845caeb7fbe24b4e807e98" name="a95c656494b845caeb7fbe24b4e807e98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95c656494b845caeb7fbe24b4e807e98">&#9670;&#160;</a></span>InserisciDati()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InserisciDati </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funzione che si occupa di prendere da input dell'utente i cognomi inseriti e inserirli nel file dati.txt. </p>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_Dati</td><td>Vettore puntatore strutturato che punto al vettore strutturato Dati</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Dopo aver inserito il cognome, vengono generate le coordinate e calcola il podio</p>
+<p>Se l'utente decide di finire di inserire i cognomi, viene chiuso il file, visualizzata l'animazione di salvataggio e calcolato il podio</p>
+
+</div>
+</div>
+<a id="aaf746b1ca6a12c6a2ddcca900de34fd1" name="aaf746b1ca6a12c6a2ddcca900de34fd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf746b1ca6a12c6a2ddcca900de34fd1">&#9670;&#160;</a></span>Salvataggio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Salvataggio </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>fileName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Simula l'animazione di salvataggio dopo che l'utente. </p>
+<p>ha inserito i cognomi degli atleti e le coordinate sono state generate </p><dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td>Parametro che si riferisce al nome del file utilizzato </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generato da&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

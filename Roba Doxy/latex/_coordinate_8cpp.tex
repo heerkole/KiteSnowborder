@@ -1,0 +1,181 @@
+\doxysection{Riferimenti per il file Coordinate.\+cpp}
+\label{_coordinate_8cpp}\index{Coordinate.cpp@{Coordinate.cpp}}
+
+
+Programma in linguaggio C++ che simula una gara di kitesnowboarding.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsection*{Composti}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ Dati\+Atleta}
+\begin{DoxyCompactList}\small\item\em Contiene i dati dell\textquotesingle{}atleta. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Definizioni}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{_coordinate_8cpp_aeab93fe7056aa87bc1f886add2ffcd3a}} 
+\#define {\bfseries NOMEfile}~\char`\"{}dati.\+txt\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Funzioni}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ Genera\+Riempi} (\textbf{ Dati\+Atleta} $\ast$p\+\_\+\+Dati, int cont, fstream \&f)
+\begin{DoxyCompactList}\small\item\em Funzione che si occupa di generare le coordinate per ogni atleta e inserirle nel file dati.\+txt. \end{DoxyCompactList}\item 
+void \textbf{ Calcola\+Podio} (\textbf{ Dati\+Atleta} $\ast$p\+\_\+\+Dati, int cont)
+\begin{DoxyCompactList}\small\item\em Funzione che calcola il podio vincente prelevando i dati dal file testuale dati.\+txt. \end{DoxyCompactList}\item 
+void \textbf{ Salvataggio} (const std\+::string \&file\+Name)
+\begin{DoxyCompactList}\small\item\em Simula l\textquotesingle{}animazione di salvataggio dopo che l\textquotesingle{}utente. \end{DoxyCompactList}\item 
+\mbox{\label{_coordinate_8cpp_a340ab192e719b86d27ead9e7faa3ad1a}} 
+void {\bfseries Visualizza\+Podio} ()
+\begin{DoxyCompactList}\small\item\em Funzione che permette di visualizzare il podio dopo aver calcolato le posizioni. \end{DoxyCompactList}\item 
+void \textbf{ Inserisci\+Dati} ()
+\begin{DoxyCompactList}\small\item\em Funzione che si occupa di prendere da input dell\textquotesingle{}utente i cognomi inseriti e inserirli nel file dati.\+txt. \end{DoxyCompactList}\item 
+\mbox{\label{_coordinate_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+int {\bfseries main} ()
+\begin{DoxyCompactList}\small\item\em Funzione principale, si occupa solo di visualizzare il messaggio di benvenuto e richiamare la prima funzione ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variabili}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{_coordinate_8cpp_ac01b2655161800e99e3072a24d780ff5}} 
+struct \textbf{ Dati\+Atleta} {\bfseries Dati} [100]
+\item 
+\mbox{\label{_coordinate_8cpp_a94fde239546255d8ff0e847a870d82e4}} 
+string {\bfseries max\+\_\+cognome}
+\item 
+\mbox{\label{_coordinate_8cpp_aafc82012e622a5ab2250bedb5b52b5c9}} 
+string {\bfseries secondo\+\_\+max\+\_\+cognome}
+\item 
+\mbox{\label{_coordinate_8cpp_a155aacfa09535765102ec0fc367f8883}} 
+string {\bfseries terzo\+\_\+max\+\_\+cognome}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrizione dettagliata}
+Programma in linguaggio C++ che simula una gara di kitesnowboarding. 
+
+\begin{DoxyAuthor}{Autore}
+Francesco Ercolino
+\end{DoxyAuthor}
+determina il podio tramita la generazione casuale delle coordinate degli atleti 
+
+\doxysubsection{Documentazione delle funzioni}
+\mbox{\label{_coordinate_8cpp_a3d3e37ac9a6a76af820be3cf2a854b14}} 
+\index{Coordinate.cpp@{Coordinate.cpp}!CalcolaPodio@{CalcolaPodio}}
+\index{CalcolaPodio@{CalcolaPodio}!Coordinate.cpp@{Coordinate.cpp}}
+\doxysubsubsection{CalcolaPodio()}
+{\footnotesize\ttfamily void Calcola\+Podio (\begin{DoxyParamCaption}\item[{\textbf{ Dati\+Atleta} $\ast$}]{p\+\_\+\+Dati,  }\item[{int}]{cont }\end{DoxyParamCaption})}
+
+
+
+Funzione che calcola il podio vincente prelevando i dati dal file testuale dati.\+txt. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em p\+\_\+\+Dati} & Importazione vettore strutturato \\
+\hline
+{\em cont} & Importazione della variabile per gestire gli elementi della struct \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyParams}{Parametri}
+{\em appoggio} & Variabile appoggio che preleva le informazioni dal file \\
+\hline
+{\em matricola} & Variabile di appoggio che contiene la matricola presa dal file \\
+\hline
+{\em risultato} & Variabile di appoggio che contiene il risultato preso dal file \\
+\hline
+{\em n\+\_\+cord} & Variabile di appoggio che contiene il numero di coordinate preso dal file \\
+\hline
+{\em nome} & Variabile di appoggio che contiene il nome dell\textquotesingle{}atleta preso dal file \\
+\hline
+{\em max} & Variabile usata per calcolare il podio \\
+\hline
+{\em secondo\+\_\+max} & Variabile usata per calcolare il podio \\
+\hline
+{\em terzo\+\_\+max} & Variabile usata per calcolare il podio\\
+\hline
+\end{DoxyParams}
+\mbox{\label{_coordinate_8cpp_a32239d73a8492e4b093a46bb1c4eb1f3}} 
+\index{Coordinate.cpp@{Coordinate.cpp}!GeneraRiempi@{GeneraRiempi}}
+\index{GeneraRiempi@{GeneraRiempi}!Coordinate.cpp@{Coordinate.cpp}}
+\doxysubsubsection{GeneraRiempi()}
+{\footnotesize\ttfamily void Genera\+Riempi (\begin{DoxyParamCaption}\item[{\textbf{ Dati\+Atleta} $\ast$}]{p\+\_\+\+Dati,  }\item[{int}]{cont,  }\item[{fstream \&}]{f }\end{DoxyParamCaption})}
+
+
+
+Funzione che si occupa di generare le coordinate per ogni atleta e inserirle nel file dati.\+txt. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em p\+\_\+\+Dati} & Importazione vettore strutturato per riempire la struct \\
+\hline
+{\em cont} & Importazione della variabile per gestire gli elementi della struct \\
+\hline
+{\em f} & Importazione variabile file per sovrascrivere il file dati.\+txt \\
+\hline
+\end{DoxyParams}
+Generazione matricola, coordinate totali, x1, x2, y1, y2 
+\begin{DoxyParams}{Parametri}
+{\em n\+\_\+\+Matricola} & Variabile che contiene il numero generato della matricola per un atleta singolo \\
+\hline
+{\em n\+\_\+cord} & Variabile che contiene il numero totale di coordinate generate per un atleta singolo \\
+\hline
+{\em n\+\_\+cord\+X1} & Variabile che contiene che contine la coordinata x del punto 1 \\
+\hline
+{\em n\+\_\+cord\+X2} & Variabile che contiene che contine la coordinata x del punto 2 \\
+\hline
+{\em n\+\_\+cord\+Y1} & Variabile che contiene che contine la coordinata y del punto 1 \\
+\hline
+{\em n\+\_\+cord\+Y2} & Variabile che contiene che contine la coordinata y del punto 2 \\
+\hline
+{\em pow\+\_\+x1} & Variabile che contiene il risultato dell\textquotesingle{}elevazione a potenza di n\+\_\+cord\+X1 \\
+\hline
+{\em pow\+\_\+x2} & Variabile che contiene il risultato dell\textquotesingle{}elevazione a potenza di n\+\_\+cord\+X2 \\
+\hline
+{\em pow\+\_\+y1} & Variabile che contiene il risultato dell\textquotesingle{}elevazione a potenza di n\+\_\+cord\+Y1 \\
+\hline
+{\em pow\+\_\+y2} & Variabile che contiene il risultato dell\textquotesingle{}elevazione a potenza di n\+\_\+cord\+Y2 \\
+\hline
+{\em risultato} & Variabile che contiene il risultato della formula della distanza tra i due punti\\
+\hline
+\end{DoxyParams}
+\mbox{\label{_coordinate_8cpp_a95c656494b845caeb7fbe24b4e807e98}} 
+\index{Coordinate.cpp@{Coordinate.cpp}!InserisciDati@{InserisciDati}}
+\index{InserisciDati@{InserisciDati}!Coordinate.cpp@{Coordinate.cpp}}
+\doxysubsubsection{InserisciDati()}
+{\footnotesize\ttfamily void Inserisci\+Dati (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funzione che si occupa di prendere da input dell\textquotesingle{}utente i cognomi inseriti e inserirli nel file dati.\+txt. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em p\+\_\+\+Dati} & Vettore puntatore strutturato che punto al vettore strutturato Dati\\
+\hline
+\end{DoxyParams}
+Dopo aver inserito il cognome, vengono generate le coordinate e calcola il podio
+
+Se l\textquotesingle{}utente decide di finire di inserire i cognomi, viene chiuso il file, visualizzata l\textquotesingle{}animazione di salvataggio e calcolato il podio\mbox{\label{_coordinate_8cpp_aaf746b1ca6a12c6a2ddcca900de34fd1}} 
+\index{Coordinate.cpp@{Coordinate.cpp}!Salvataggio@{Salvataggio}}
+\index{Salvataggio@{Salvataggio}!Coordinate.cpp@{Coordinate.cpp}}
+\doxysubsubsection{Salvataggio()}
+{\footnotesize\ttfamily void Salvataggio (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+Simula l\textquotesingle{}animazione di salvataggio dopo che l\textquotesingle{}utente. 
+
+ha inserito i cognomi degli atleti e le coordinate sono state generate 
+\begin{DoxyParams}{Parametri}
+{\em file\+Name} & Parametro che si riferisce al nome del file utilizzato \\
+\hline
+\end{DoxyParams}

@@ -55,14 +55,14 @@ void Salvataggio(const std::string& fileName)
         int numBarre = (int)(i / 5);
         int numSpazi = 20 - numBarre;
         
-        /*! @brief Cicli di visualizzazione barra di caricamento */
+        //Cicli di visualizzazione barra di caricamento 
         for (int j = 0; j < numBarre; j++) { cout << "#"; }
         
         for (int j = 0; j < numSpazi; j++) { cout << " "; }
         
         cout << "]";
 
-        /*! @brief Istruzione che imposta il timer di 50 millisecondi per mostrare il prossimo carattere stampato sull'animazione di caricamento */
+        //Impostazione ritardo per visualizzare l'animazione di salvataggio
         this_thread::sleep_for(chrono::milliseconds(50));
     }
     cout<<"\n Dati salvati sul file "<<fileName<<"!"<<endl;
@@ -97,10 +97,9 @@ void CalcolaPodio(DatiAtleta* p_Dati, int cont)
     while (getline(f, nome, ',') && getline(f, matricola, ',') && getline(f, risultato, ',') && getline(f, n_cord)) 
     {
         // Converte il risultato in un numero intero
-        /*! @brief Converte il risultato in formato stringa preso dal file testuale in intero per permettere di calcolare il podio*/
         int int_risultato = std::stoi(risultato);
 
-        /*! @brief Calcolo del podio */
+        
         // Calcola il podio
         if (int_risultato > max) 
         {
@@ -163,7 +162,7 @@ void InserisciDati()
     char continua = 's';
     int cont = 0;
 
-    /*! @brief Ciclo di inserimento cognome da parte dell'utente */
+
     //Ciclo di input cognome e inserimento nel file 
     while(continua=='s')
     {
@@ -179,7 +178,7 @@ void InserisciDati()
         //Riempimento vettore e scrittura sul file
         getline(cin, p_Dati[cont].Cognome);
 
-        /*! @brief Dopo aver inserito il cognome, vengono generate le coordinate e calcolato il podio */
+        /*! @brief Dopo aver inserito il cognome, vengono generate le coordinate e calcola il podio*/
         //Genera le coordinate che si riferiscono all'atleta inserito
         GeneraRiempi(p_Dati, cont, f);
         CalcolaPodio(p_Dati, cont);
@@ -196,7 +195,7 @@ void InserisciDati()
 
            if(continua=='n')
            {
-                /*! @brief Se l'utente decide di finire di inserire i cognomi, viene visualizzata l'animazione di salvataggio e calcolato il podio */
+                /*! @brief Se l'utente decide di finire di inserire i cognomi, viene chiuso il file, visualizzata l'animazione di salvataggio e calcolato il podio */
                 //Salvataggio finale e animazione salvataggio
                 f.close();
                 Salvataggio(NOMEfile);
@@ -253,19 +252,18 @@ void GeneraRiempi(DatiAtleta* p_Dati, int cont, fstream& f)
     //Calcolo risultato con la formula della distanza tra due punti
     int risultato = sqrt((pow_x1-pow_x2)+(pow_y1-pow_y2));
 
-    /*! @brief Conversione in stringa della matricola generata casualmente precedentemente */
-    //Conversione a stringa 
+    //Conversione in stringa del codice matricola da mettere nel file 
     p_Dati[cont].Matricola = to_string(n_Matricola);
 
-    /*! @brief Scrittura sul file del cognome, matricola, risultato ottenuto e numero di coordinate totali di un singolo atleta */
-    //Scrittura sul file 
+
+    //Sovrascrittura del file con i nuovi dati
     f<<p_Dati[cont].Cognome<<","
      <<p_Dati[cont].Matricola<<","
      <<risultato<<","
      <<n_cord<<endl;
 }
 
-
+/*! @brief Funzione principale, si occupa solo di visualizzare il messaggio di benvenuto e richiamare la prima funzione  */
 //Funzione principale
 int main()
 {
