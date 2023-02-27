@@ -143,9 +143,9 @@ void VisualizzaPodio()
     cin.ignore();
     getline(cin, appoggio); // aspetta l'input dell'utente
     cout << "\n\n Podio finale :\n"
-    << " 1. " << max_cognome << endl
-    << " 2. " << secondo_max_cognome << endl
-    << " 3. " << terzo_max_cognome << endl;
+    << " 1. " <<max_cognome<<endl
+    << " 2. " <<secondo_max_cognome<<endl
+    << " 3. " <<terzo_max_cognome<<endl;
 }
 
 /*! @brief Funzione che si occupa di prendere da input dell'utente i cognomi inseriti e inserirli nel file dati.txt */
@@ -156,8 +156,15 @@ void InserisciDati()
     DatiAtleta* p_Dati = &Dati[0];
 
     fstream f(NOMEfile, ios::app);
+    cout<<"    _____                         _     _  _         "<<endl
+        <<"   / ____|                       | |   (_)| |        "<<endl
+        <<"  | (___   _ __    ___ __      __| | __ _ | |_  ___  "<<endl
+        <<"   \\___ \\ | '_ \\  / _ \\\\ \\ /\\ / /| |/ /| || __|/ _ \\ "<<endl
+        <<"   ____) || | | || (_) |\\ V  V / |   < | || |_|  __/ "<<endl
+        <<"  |_____/ |_| |_| \\___/  \\_/\\_/  |_|\\_\\|_| \\__|\\___| "<<endl;
+        
+    cout<<"\n\n  Premi ENTER per continuare...";
 
-    system("clear");
 
     char continua = 's';
     int cont = 0;
@@ -267,7 +274,6 @@ void GeneraRiempi(DatiAtleta* p_Dati, int cont, fstream& f)
 //Funzione principale
 int main()
 {
-    cout<<"\n Benvenuto alla gara di KiteSnowboarding!\n\n Premi ENTER per inserire i cognomi degli atleti...";
     InserisciDati();
 
     return 0;
