@@ -1,8 +1,9 @@
 /*! 
     @author Francesco Ercolino 
-    @brief Programma in linguaggio C++ che simula una gara di kitesnowboarding 
-    @brief determina il podio tramita la generazione casuale delle coordinate degli atleti
+    @brief Programma in linguaggio C++ che simula una gara di kitesnowboarding determina il podio tramita la generazione casuale delle coordinate degli atleti
     @file Coordinate.cpp
+    @version 2.0
+    @date 27/02/23
 */
 
 #include <iostream>
@@ -37,12 +38,13 @@ string max_cognome, secondo_max_cognome, terzo_max_cognome;
 void GeneraRiempi(DatiAtleta* p_Dati, int cont, fstream& f);
 void CalcolaPodio(DatiAtleta* p_Dati, int cont);
 
+
+//Funzione che stampa la simulazione del salvataggio
 /*!
     @brief Simula l'animazione di salvataggio dopo che l'utente 
     @brief ha inserito i cognomi degli atleti e le coordinate sono state generate
     @param fileName Parametro che si riferisce al nome del file utilizzato 
 */
-//Funzione che stampa la simulazione del salvataggio
 void Salvataggio(const std::string& fileName) 
 {
     system("clear");
